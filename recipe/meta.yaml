@@ -1,5 +1,5 @@
 {% set name = "burst2safe" %}
-{% set version = "0.3.2" %}
+{% set version = "0.3.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/burst2safe-{{ version }}.tar.gz
-  sha256: 5666491aab1dcd2873368ca650894de5c30d316172eb94d925e1e484fa50d844
+  sha256: f8219a2eda36f8dcbb9bd65487b3a9dded3c232abf4319d1ab841eb4f05c29c1
 
 build:
   entry_points:
@@ -25,6 +25,7 @@ requirements:
   run:
     - python >=3.10
     - gdal
+    - shapely >=2
     - numpy
     - lxml
     - asf_search
