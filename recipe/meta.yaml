@@ -1,5 +1,5 @@
 {% set name = "burst2safe" %}
-{% set version = "0.4.1" %}
+{% set version = "0.4.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/burst2safe-{{ version }}.tar.gz
-  sha256: 91f498795da548e13789ddcfe1ceb7c65daa884be82c56e75f6a091ae052d0f3
+  sha256: 51e8cb6d171e356bc62e7a059b3f2e557ebbb8c99c697274026225975f9aa8f2
 
 build:
   entry_points:
@@ -18,12 +18,12 @@ build:
 
 requirements:
   host:
-    - python >=3.10
+    - python >=3.9
     - setuptools >=61.0
     - setuptools-scm >=6.2
     - pip
   run:
-    - python >=3.10
+    - python >=3.9
     - gdal
     - shapely >=2
     - numpy
