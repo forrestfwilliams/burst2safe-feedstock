@@ -1,5 +1,5 @@
 {% set name = "burst2safe" %}
-{% set version = "1.0.0" %}
+{% set version = "1.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/burst2safe-{{ version }}.tar.gz
-  sha256: 5a89d30f7a61a23fea63ca7962e737ae95ef83ca9e9804b6e67a41b2e073fab6
+  sha256: 1f89c5f67783b0b70781927541ee7188ac7df6e120095bf9524b767c82f56af3
 
 build:
   entry_points:
