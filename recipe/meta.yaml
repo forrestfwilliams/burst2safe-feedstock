@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/burst2safe-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/burst2safe-{{ version }}.tar.gz
   sha256: 384d032447f6b8273531e734ddf0541b4f9a19908c6db78b6fd30927766d6259
 
 build:
@@ -14,16 +14,16 @@ build:
     - burst2safe = burst2safe.burst2safe:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.9
+    - python {{ python_min }}
     - setuptools >=61.0
     - setuptools-scm >=6.2
     - pip
   run:
-    - python >=3.9
+    - python >={{ python_min }}
     - gdal
     - shapely >=2
     - numpy <2.1.0
@@ -40,6 +40,7 @@ test:
     - burst2safe --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   summary: A package for converting ASF-derived Sentinel-1 burst SLC products to the ESA SAFE format.
