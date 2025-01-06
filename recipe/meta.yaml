@@ -1,5 +1,5 @@
 {% set name = "burst2safe" %}
-{% set version = "1.3.1" %}
+{% set version = "1.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/burst2safe-{{ version }}.tar.gz
-  sha256: c315d626884cca7863dae520a832283759c7d7c084e539bfcd3bb72e92a73c33
+  sha256: 27f00eb6b4933e473637477615a91a06f87b702886248a975a6c17174733d71f
 
 build:
   entry_points:
@@ -31,6 +31,7 @@ requirements:
     - asf_search
     - tifffile >=2022.04.22
     - dateparser !=1.1.0
+    - aiohttp
 
 test:
   imports:
